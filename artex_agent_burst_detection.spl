@@ -1,0 +1,12 @@
+# Detection Rule: Autonomous LLM Agent Command Burst (FBI FLASH-20261113-001 / ARTEX)
+# Author: Jeremy M. (moczyj-cmd)
+# Data Source: Ubuntu Linux /var/log/auth.log (sourcetype=syslog)
+# MITRE ATT&CK Mapping: T1548.003 (Abuse Elevation Control Mechanism: Sudo) / Automated Execution
+# Logic: Uses inline Regex (rex) to extract sudo_user and executed_cmd, buckets events into
+#        5-second windows, and flags >=4 privileged commands executed at machine speed.
+
+source="/var/log/auth.log" process="sudo" COMMAND=*
+| rex field=_raw "sudo:\s+(?<sudo_user>\S+)\s+:.*COMMAND=(?<executed_cmd>.*)$"
+| bucket _time span=5s
+| stats count as command_burst_count, values(executed_cmd) as commands_run by _time, sudo_user, host
+| where command_burst_count >= 4
