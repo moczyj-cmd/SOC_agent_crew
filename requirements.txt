@@ -1,0 +1,6 @@
+# Offline auth.log sliding-window triage engine (auth_log_triage.py)
+pandas>=2.0.0
+
+# Multi-agent SOC workflow (soc_engine.py)
+pydantic>=2.0.0
+crewai

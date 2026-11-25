@@ -1,0 +1,19 @@
+2026-11-25T09:50:12.104512-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-25T09:55:40.221004-06:00 lab-ubuntu pkexec[11204]: admin: Executing command [USER=root] [TTY=unknown] [CWD=/home/admin] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+2026-11-25T10:00:01.100000-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/sbin/usermod -a -G render ollama
+2026-11-25T10:00:01.350000-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/sbin/usermod -a -G video ollama
+2026-11-25T10:00:01.600000-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/sbin/usermod -a -G ollama admin
+2026-11-25T10:00:01.900000-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+2026-11-25T10:00:02.150000-06:00 lab-ubuntu sudo: admin : TTY=/dev/pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl restart ollama
+2026-11-25T10:02:04.120000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/id
+2026-11-25T10:02:04.450000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/cat /etc/passwd
+2026-11-25T10:02:04.890000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/find / -perm -4000
+2026-11-25T10:02:05.110000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/ls -la /root
+2026-11-25T10:02:05.380000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+2026-11-25T10:02:05.620000-06:00 lab-ubuntu sudo: svc_agent : TTY=unknown ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/crontab -l
+2026-11-25T10:15:01.102341-06:00 lab-ubuntu sshd-session[41201]: Failed password for invalid user admin from 198.51.100.42 port 51234 ssh2
+2026-11-25T10:15:03.204112-06:00 lab-ubuntu sshd-session[41203]: Failed password for root from 198.51.100.42 port 51238 ssh2
+2026-11-25T10:15:05.881209-06:00 lab-ubuntu sshd-session[41205]: Failed password for invalid user ubuntu from 198.51.100.42 port 51244 ssh2
+2026-11-25T10:15:08.019442-06:00 lab-ubuntu sshd-session[41207]: Failed password for invalid user postgres from 198.51.100.42 port 51250 ssh2
+2026-11-25T10:15:10.551903-06:00 lab-ubuntu sshd-session[41209]: Failed password for root from 198.51.100.42 port 51256 ssh2
+2026-11-25T10:15:12.904118-06:00 lab-ubuntu sshd-session[41211]: Failed password for invalid user test from 198.51.100.42 port 51262 ssh2
